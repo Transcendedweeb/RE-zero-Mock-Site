@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/cssCart.css">
+    <script src="js/main.js"> </script>
+    <title>Unofficial RE:ZERO shop</title>
+  </head>
+  <body onload="productLoader()">
+    <figure><img src="img/banners/rem_banner.jpg" alt="RE:zero Conti" class="banner"></figure>
+
+    <nav>
+        <figure><a href="."><img src="img/logo2.png" alt="Unofficial store RE:zero" class="logo2"></a></figure>
+        <ul>
+            <li> <a href="shop.html">Our shop</a> </li>
+            <li> <a href="cart.html">Your cart</a> </li>
+            <li> <a href="policy.html">Our policy</a> </li>
+            <li> <a href="summary.html">About</a> </li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <article class="content" id="js--content">
+            <h1>Your cart:</h1>
+            <div class="cartItems">
+                <section class="header">
+                    <h2>Products:</h2> <h2>Quantity:</h2> <h2>Price:</h2><h2>Remove Item</h2>
+                </section>
+                <h4 id="emptyText">Your cart seems a bit empty</h4>
+
+                <section data-product="lnV1">
+                    <h3>Light novel Volume 1</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="12.99">€12.99</p>
+                    <button onclick="clearProduct('[data-product=\'lnV1\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="lnV2" >
+                    <h3>Light novel Volume 2</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="12.50">€12.50</p>
+                    <button onclick="clearProduct('[data-product=\'lnV2\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="lnV3" >
+                    <h3>Light novel Volume 3</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="12.50">€12.50</p>
+                    <button onclick="clearProduct('[data-product=\'lnV3\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="lnV4">
+                    <h3>Light novel Volume 4</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="11.99">€11.99</p>
+                    <button onclick="clearProduct('[data-product=\'lnV4\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="lnV5">
+                    <h3>Light novel Volume 5</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="8.55">€8.55</p>
+                    <button onclick="clearProduct('[data-product=\'lnV5\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="lnV6">
+                    <h3>Light novel Volume 6</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="8.55">€8.55</p>
+                    <button onclick="clearProduct('[data-product=\'lnV6\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="lnV7">
+                    <h3>Light novel Volume 7</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="10.50">€10.50</p>
+                    <button onclick="clearProduct('[data-product=\'lnV7\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="lnV8">
+                    <h3>Light novel Volume 8</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="11.99">€11.99</p>
+                    <button onclick="clearProduct('[data-product=\'lnV8\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="lnV9">
+                    <h3>Light novel Volume 9</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="12.99">€12.99</p>
+                    <button onclick="clearProduct('[data-product=\'lnV9\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="lnV10">
+                    <h3>Light novel Volume 10</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="12.99">€12.99</p>
+                    <button onclick="clearProduct('[data-product=\'lnV10\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="exV1">
+                    <h3>EX-series Volume 1</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="7.0">€7.-</p>
+                    <button onclick="clearProduct('[data-product=\'exV1\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="exV2">
+                    <h3>EX-series Volume 2</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="7.0">€7.-</p>
+                    <button onclick="clearProduct('[data-product=\'exV2\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="exV3">
+                    <h3>EX-series Volume 3</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="7.0">€7.-</p>
+                    <button onclick="clearProduct('[data-product=\'exV3\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="exV4">
+                    <h3>EX-series Volume 4</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="7.0">€7.-</p>
+                    <button onclick="clearProduct('[data-product=\'exV4\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="brV1">
+                    <h3>Blue-ray Season 1, part 1</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="45.0">€45.-</p>
+                    <button onclick="clearProduct('[data-product=\'brV1\']')" class="removeB">X</button>
+                </section>
+
+                <section data-product="brV2">
+                    <h3>Blue-ray Season 1, part 2</h3>
+                    <input class="quantity" type="number" value="1" min='1' onkeydown="return false" onclick="updateTotal()">
+                    <p class="price" data-price="45.0">€45.-</p>
+                    <button onclick="clearProduct('[data-product=\'brV2\']')" class="removeB">X</button>
+                </section>
+
+            </div>
+
+            <section class="totalText">
+                <h5>Total Price:</h5>
+                <h5 class="total">€0.00</h5>
+            </section>
+
+            <button onclick="checkOutAlert()" class="checkOut">Check Out</button>
+        </article>
+
+    </main>
+
+
+    <figure><img src="img/banners/bea_banner.jpg" alt="RE:zero Conti" class="banner"></figure>
+  </body>

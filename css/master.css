@@ -1,0 +1,304 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	margin: 0 auto;
+	grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #fa7ffa, #97e6fa);
+	background-size: 1000em;
+	animation-name: gradient;
+    animation-duration: 30s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+	overflow:hidden;
+	display: grid;
+    grid-template-columns: 25% 50% 25%;
+	grid-auto-rows: 100%;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+nav{
+	background-color: white;
+	border-bottom: solid 2px black;
+    width: 100%;
+	height: 100px;
+    padding-top: 20px;
+    top: 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    z-index: 1;
+}
+
+.logo2{
+	margin-left: 26%;
+	max-width: 80%;
+    height: auto;
+}
+
+.titleCards{
+	display: grid;
+	grid-template-columns: 28% 28%;
+	grid-template-rows: 28% 28%;
+	column-gap: 200px;
+	margin-top: 16%;
+}
+
+ul{
+	margin-top: 0;
+	list-style: none;
+}
+
+.card{
+	list-style: none;
+	padding: 10px;
+	background-color: black;
+	font-size: 40px;
+	width: 380px;
+	height: 260px;
+	border: solid 3px red;
+	border-radius: 7px;
+	box-shadow: 0 0 20px red;
+	margin: 10%;
+}
+
+.card h1{
+	font-size: 40px;
+	font-family: 'Gloria Hallelujah', cursive;
+	font-weight: bold;
+	color: red;
+}
+
+.card img{
+	width: auto;
+	height: 204px;
+	margin-top: -12%;
+	margin-left: 40%;
+	opacity: 0%;
+}
+
+.card:hover{
+	background-color: white;
+	border-color: lightskyblue;
+	box-shadow: 0 0 20px lightskyblue;
+}
+
+.card:hover h1{
+	color: lightskyblue;
+	animation: RSB 2s ease;
+}
+
+.card:hover img{
+	opacity: 100%;
+	animation: imgFadeIn 3s ease;
+}
+
+.banner{
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes imgFadeIn{
+	0%{
+		opacity: 0%;
+	}
+	100%{
+		opacity: 100%;
+	}
+}
+
+@keyframes RSB{
+    0%{
+        color: red;
+    }
+    100%{
+        color: lightskyblue;
+    }
+} 
+
+@media only screen and (max-width: 1850px){	
+	.card{ 
+		margin-top: unset;
+		padding: 5px;
+		width: 340px;
+		height: 260px;
+	}
+
+	.card img{
+		margin-bottom: -36.5%;
+		margin-left: 40%;
+		height: 180px;
+	}
+	
+	.card h2{
+		font-size: 30px;
+	}
+
+}
+
+@media only screen and (max-width: 1750px){
+	.card{
+		padding: 5px;
+		width: 320px;
+	}
+
+	.card h2{
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 1600px){
+	.banner{
+		display: none;
+	}
+
+	body{
+		display: block;
+	}
+
+	.container{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		margin-left: 18%;
+		margin-top: -10%;
+	}
+
+	.card{ 
+		padding: 10px;
+		width: 380px;
+		margin-bottom: 90%;
+	}
+
+	.logo2{
+		margin-left: 35%;
+	}
+
+	.card img{
+		height: 204px;
+		margin-bottom: 20%;
+	}
+	
+}
+
+@media only screen and (max-width: 1300px){
+	.container{
+		margin-left: 5%;
+		margin-top: -15%;
+	}
+}
+
+@media only screen and (max-width: 1150px){
+	.card{ 
+		padding: 5px;
+		width: 300px;
+		margin-left: 0px;
+	}
+
+	.card img{
+		margin-bottom: -39%;
+		height: 180px;
+		margin-left: 35%;
+		opacity: 100%;
+	}
+
+	.titleCards{
+		column-gap: 150px;
+		row-gap: 50px;
+	}
+
+	.logo2{
+		margin-left: 23%;
+	}
+
+	.card{
+		background-color: white;
+		border-color: lightskyblue;
+		box-shadow: 0 0 20px lightskyblue;
+	}
+	
+	.card h1{
+		color: lightskyblue;
+	}
+	
+	.card:hover{
+		
+		animation: unset;
+	}
+	
+	.card:hover h1{
+		
+		animation: unset;
+	}
+
+	.card:hover img{
+		animation: none;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	body{
+		overflow: scroll;
+	}
+		
+	nav{
+		height: 90px;
+		z-index: 2;
+	}
+
+	.container{
+		height: 500px;
+	}
+
+	.titleCards{
+		display: grid;
+		grid-template-columns: 28%;
+		grid-template-rows: 20% 20% 20% 20%;
+		column-gap: 0px;
+		row-gap: 50px;
+		margin-top: 40%;
+	}
+
+	.logo2{
+		margin-left: 10%;
+	}
+
+	.card{ 
+		padding: 5px;
+		width: 260px;
+		height: 220px;
+	}
+
+	.card img{
+		margin-bottom: -29%;
+		height: 130px;
+		margin-left: 45%;
+	}
+
+	ul{
+		height: 1000px;
+	}
+}

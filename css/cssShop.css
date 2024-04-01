@@ -1,0 +1,371 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #fa7ffa, #97e6fa);
+	background-size: 1000em;
+	animation-name: gradient;
+    animation-duration: 30s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+	overflow:scroll;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-auto-rows: 100%;
+}
+
+a{
+    text-decoration: none;
+	color: white;
+}
+
+.container{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: 20%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+nav{
+	background-color: white;
+	border-bottom: solid 2px black;
+    width: 100%;
+	height: 150px;
+    padding-top: 20px;
+    top: 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    z-index: 1;
+}
+
+nav ul{
+	margin-top: 2%;
+	margin-left: 5%;
+}
+
+nav ul li{
+    display: inline-block;
+    width: 20%;
+	margin-left: 2%;
+    height: auto;
+    text-align: center;
+	background-color: blueviolet;
+	border: solid 3px black;
+	border-radius: 7px;
+}
+
+nav ul li a{
+	display: block;
+    text-decoration: none;
+    padding: 5px;
+	color: white;
+    font-size: 2vh;
+}
+
+.logo2{
+	margin-left: 25.5%;
+	max-width: 70%;
+    height: auto;
+}
+
+.cartIcon{
+    max-height: 50px;
+    height: auto;
+    background-color: blueviolet;
+    border: solid 2px black;
+    border-radius: 0.50em;
+    padding: 5px;
+}
+
+.cartIcon:hover{
+    border-color: cornflowerblue;
+}
+
+.banner{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+h1{
+    font-size: 25px;
+    padding-left: 5px;
+    color: white;
+    background-color: blueviolet;
+    width: 50%;
+    border: solid 2px black;
+    border-radius: 1em;
+    text-align: center;
+    margin-left: 25%;
+    margin-bottom: 5px;
+}
+
+h2{
+    padding-left: 5px;
+    font-size: 20px;
+    color: white;
+    background-color: blueviolet;
+    width: 50%;
+    border: solid 2px black;
+    border-radius: 1em;
+    text-align: center;
+    margin-left: 25%;
+    margin-bottom: 5px;
+    margin-top: 25px;
+}
+
+h3{
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+section ul li{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 6fr;
+    padding: 5px;
+    padding-bottom: 20px;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 0.25em;
+    margin-bottom: 5px;
+}
+
+ul{
+    list-style: none;
+}
+
+ul img{
+    max-width: 75%;
+    margin-bottom: 50px;
+    height: auto;
+    border: solid 2px black;
+}
+
+.productName{
+    text-align: center;
+    color: blueviolet;
+    border-bottom: solid 2px black;
+    grid-column: 2/2;
+}
+
+ul div{
+    display: grid;
+    grid-template-rows: 65% 5% 25%;
+}
+
+.price{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -5%;
+    padding-top: 10px;
+}
+
+.cartB{
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    background-color: blueviolet;
+    border: none;
+    overflow: hidden;
+    border-radius: 0.25em;
+    box-shadow: 0 5px 15px #193047;
+    padding: 10px;
+    width: 30%;
+    transition-duration: 0.4s;
+    margin-top: 20px;
+}
+  
+.cartB:hover{
+    background: white;
+    box-shadow: 0px 2px 10px 5px blueviolet;
+    color: blueviolet;
+}
+  
+.cartB:after{
+    content: "";
+    background: blueviolet;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+  
+.cartB:active:after{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+  
+.cartB:focus{ 
+    outline:0; 
+}
+
+.filter{
+    display: flex;
+    flex-direction: row;
+    border: unset;
+    background-color: white;
+    border: solid 2px black;
+    padding: 5px;
+    margin-bottom: 1%;
+}
+
+.filter button{
+    width: 75%;
+    font-size: 15px;
+    padding: 15px;
+    background-color: blueviolet;
+    color: white;
+    border: solid 2px black;
+    border-radius: 1em;
+    margin: 3px;
+}
+
+.filter button:hover{
+    border-color: cornflowerblue;
+} 
+
+.filter button:focus{
+    background-color: white;
+    color: blueviolet;
+}
+
+.filterTitle{
+    margin-top: 20px;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media only screen and (max-width:1800px){
+    .container{
+        margin-top: 20%;
+    }
+}
+
+@media only screen and (max-width:1600px){
+    .container{
+        margin-top: 22%;
+    }
+
+    .logo2{
+        margin-left: 10%;
+    }
+}
+
+@media only screen and (max-width:1400px){
+    .cartB{
+        font-size: 15px;
+        width: 25%;
+        margin-top: 20px;
+    }
+
+    li{
+        margin: 1%;
+    }
+
+    .container{
+        margin-top: 30%;
+    }
+
+    .logo2{
+        padding-left: 0%;
+    }
+    
+}
+
+@media only screen and (max-width:1000px){
+    .banner{
+        display: none;
+    }
+
+    .container{
+        width: 98%;
+    }
+    
+    body{
+       display: block; 
+    }
+
+    nav ul{
+        margin-top: 1%;
+    }
+
+    nav ul li a{
+        padding: 3px;
+        font-size: 13px;
+        margin-left: 1%;
+    }
+
+    .logo2{
+        margin-left: 20%;
+    }
+
+    .container{
+        margin-top: -0.5%;
+    }
+}
+
+@media only screen and (max-width:750px){
+    ul div{
+        display: unset;
+    }
+
+    .cartB{
+        font-size: 15px;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width:700px){
+    nav{
+        height: 120px;
+    }
+
+    .logo2{
+        margin-left: 15%;
+    }
+
+    nav ul li{
+        margin-left: 0.5%;
+    }
+
+    .price{
+        margin-top: 10px;
+    }
+
+    .cartB{
+        margin-bottom: 10px;
+    }
+}
